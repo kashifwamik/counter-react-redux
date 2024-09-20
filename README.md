@@ -1,8 +1,17 @@
-# React + Vite
+# Counter React Redux App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **Counter App** built with **React** and **Redux** for store management. The app demonstrates state management using Redux, allowing you to increment, decrement, add, and subtract values. It also features conditional rendering and a toggle functionality that hides the counter display. The styling is a combination of **Bootstrap** and custom CSS for a polished and responsive UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Increment/Decrement Counter**: Increase or decrease the counter by 1.
+- **Add/Subtract Custom Values**: Add or subtract custom values to/from the counter.
+- **Reset Counter**: Reset the counter to zero.
+- **Toggle Display**: Switch between showing or hiding the counter display using a toggle button.
+- **Component-Based Architecture**: The app is divided into reusable functional components for better maintainability.
+- **Redux Store Management**: The app manages the state of the counter using Redux actions, reducers, and a store.
+- **Bootstrap Integration**: The UI is enhanced with Bootstrap for responsive and sleek design.
+
+## Deployment
+
+The project is deployed using GitHub Pages. You can view the live application [here](https://kashifwamik.github.io/counter-react-redux/).
