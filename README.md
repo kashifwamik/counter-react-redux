@@ -12,7 +12,7 @@ This is a simple **Counter App** built with **React** and **Redux** as as well *
 - **Redux Store Management**: The app manages the state of the counter using Redux actions, reducers, and a store.
 - **Bootstrap Integration**: The UI is enhanced with Bootstrap for responsive and sleek design.
 
-##Modified
+##Modification
 
 - **Redux Store Management**: The app manages the state of the counter using Redux Toolkit's configureStore, createSlice, and built-in actions and reducers for efficient state management.
 
