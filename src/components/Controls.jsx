@@ -1,30 +1,33 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 
+import { counterActions } from "../store/counter";
+import { privacyActions } from "../store/privacy";
 const Controls = () => {
   const input = useRef();
   const dispatch = useDispatch();
   const handleIncrement = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment());
   };
 
   const handleDecrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement());
+  };
+  const handleReset = () => {
+    dispatch(counterActions.reset());
   };
   const handleAdd = () => {
-    dispatch({ type: "ADD", payload: {num:input.current.value} });
+    dispatch(counterActions.add(input.current.value));
     input.current.value = "";
   };
   const handleSubtract = () => {
-    dispatch({ type: "SUBTRACT", payload: {num:input.current.value} });
+    dispatch(counterActions.subtract(input.current.value));
     input.current.value = "";
   };
   const handleToggle = () => {
-    dispatch({ type: "TOGGLE" });
+    dispatch(privacyActions.toggle());
   };
-  const handleStop = () => {
-    dispatch({ type: "STOP" });
-  };
+
   return (
     <>
       <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -42,11 +45,15 @@ const Controls = () => {
         >
           -1
         </button>
-        <button type="button" class="btn btn-warning" onClick={handleToggle}>
+        <button
+          type="button"
+          className="btn btn-warning"
+          onClick={handleToggle}
+        >
           Primary Toggle
         </button>
-        <button type="button" class="btn btn-danger" onClick={handleStop}>
-          Stop
+        <button type="button" className="btn btn-danger" onClick={handleReset}>
+          Reset
         </button>
       </div>
       <div
@@ -54,12 +61,12 @@ const Controls = () => {
         style={{ marginTop: "4%" }}
       >
         <input type="number" placeholder="Enter your number:" ref={input} />
-        <button type="button" class="btn btn-info" onClick={handleAdd}>
+        <button type="button" className="btn btn-info" onClick={handleAdd}>
           ADD
         </button>
         <button
           type="button"
-          class="btn btn-secondary"
+          className="btn btn-secondary"
           onClick={handleSubtract}
         >
           SUBTRACT
